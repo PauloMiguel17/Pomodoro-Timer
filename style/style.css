@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+:root{
+
+}
+
+body{
+    background-color: rgba(255, 0, 0, 0.595);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin: auto;
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(247, 0, 0, 0.316);
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header>h1{
+    color: aliceblue;
+    font-size: 35px;
+}
+
+div.container{
+    margin: auto;
+    width: 600px;
+    background-color: rgb(248, 73, 73);
+}
