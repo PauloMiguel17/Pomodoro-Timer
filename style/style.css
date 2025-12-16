@@ -19,6 +19,7 @@ header{
     text-align: center;
     border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.093);
 }
 
 header>h1{
@@ -32,6 +33,7 @@ div.container{
     border-radius: 10px;
     background-color: #e56161;
     padding: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.093);
 }
 
 div#relogio{
@@ -42,6 +44,7 @@ div#relogio{
     width: 250px;
     margin: auto;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.093);
 }
 
 .botoes{
@@ -51,8 +54,16 @@ div#relogio{
 }
 
 .func{
+    cursor: pointer;
     background-color: #F08080;
     border-radius: 10px;
     font-size: 20px;
     color: aliceblue;
+    border-color: #681a0c;
+}
+#botao_config{
+    font-size: 20px;
+    width: 28px;
+    cursor: pointer;
+    user-select: none;
 }
