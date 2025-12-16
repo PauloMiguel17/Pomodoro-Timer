@@ -15,7 +15,7 @@ header{
     margin: auto;
     width: 300px;
     padding: 10px;
-    background-color: rgb(209, 60, 60);
+    background-color: rgb(244, 81, 81);
     text-align: center;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -30,16 +30,16 @@ div.container{
     margin: auto;
     width: 600px;
     border-radius: 10px;
-    background-color: #FF6347;
+    background-color: #e56161;
     padding: 5px;
 }
 
 div#relogio{
     color: aliceblue;
-    font-size: 60px;
+    font-size: 95px;
     text-align: center;
     background-color: #F08080;
-    width: 200px;
+    width: 250px;
     margin: auto;
     border-radius: 10px;
 }
