@@ -23,39 +23,51 @@ document.getElementById('btn_salvar').addEventListener('click', function() {
 });
 
 
+let minutos;
+let segundos;
+let intervalo;
 
-function comecar(){
+function comecar() {
 
-let minutos = tempoFoco;
-let segundos = 0;
+    if (intervalo) return;
 
-const elementoRelogio = document.querySelector('#relogio p');
-
-if(window.timerInterval) clearInterval(window.timerInterval)
-
-const timer = setInterval(function() {
-
-    if (minutos === 0 && segundos === 0) {
-        clearInterval(timer);
-        alert("Hora do intervalo!");
-        return;
-    }
-
-    if (segundos === 0) {
-        segundos = 59;
+    if ((minutos === undefined && segundos === undefined) || (minutos === 0 && segundos === 0)) {
+        minutos = tempoFoco; 
+        segundos = 0;
         minutos--;
-    } else {
-        segundos--; 
+        segundos = 59;
+        document.querySelector('#relogio p').innerText = `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
     }
 
-    const minFormatado = String(minutos).padStart(2, '0');
-    const segFormatado = String(segundos).padStart(2, '0');
+    // 3. Inicia o loop
+    intervalo = setInterval(function() {
+        
+        // Se acabou
+        if (minutos === 0 && segundos === 0) {
+            clearInterval(intervalo);
+            intervalo = null;
+            alert("Acabou o tempo!");
+            return;
+        }
 
-    elementoRelogio.innerText = `${minFormatado}:${segFormatado}`;
+        // Decrementa
+        if (segundos === 0) {
+            segundos = 59;
+            minutos--;
+        } else {
+            segundos--; 
+        }
 
-}, 1000); // 1000 milissegundos = 1 segundo
+        // Atualiza tela
+        const minFormatado = String(minutos).padStart(2, '0');
+        const segFormatado = String(segundos).padStart(2, '0');
+        document.querySelector('#relogio p').innerText = `${minFormatado}:${segFormatado}`;
+
+    }, 1000); 
 }
 
 function pause(){
-    
+   clearInterval(intervalo);
+    intervalo = null;
 }
+
