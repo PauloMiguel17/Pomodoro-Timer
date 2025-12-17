@@ -67,3 +67,59 @@ div#relogio{
     cursor: pointer;
     user-select: none;
 }
+
+/* 1. Estilo do Botão de Engrenagem */
+#botao_config {
+    font-size: 1.5rem; 
+    cursor: pointer;       /* Mãozinha ao passar o mouse */
+    text-align: right;
+    margin-bottom: 10px; 
+    transition: transform 0.4s ease; /* Animação suave */
+}
+
+/* Efeito: Gira a engrenagem quando passa o mouse */
+#botao_config:hover {
+    transform: scale(1.2);
+}
+
+/* 2. Estilo do Painel de Configurações */
+#painel_config {
+    display: none;         
+    
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #333; 
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;   /* Empurra o relógio para baixo */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Estilo das caixinhas de número (inputs) */
+#painel_config input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+/* Estilo do Botão Salvar */
+#btn_salvar {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#btn_salvar:hover {
+    background-color: #45a049; /* Verde mais escuro no hover */
+}
