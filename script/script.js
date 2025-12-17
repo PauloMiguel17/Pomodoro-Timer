@@ -55,3 +55,7 @@ const timer = setInterval(function() {
 
 }, 1000); // 1000 milissegundos = 1 segundo
 }
+
+function pause(){
+    
+}

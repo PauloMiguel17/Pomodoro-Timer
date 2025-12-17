@@ -61,25 +61,19 @@ div#relogio{
     color: aliceblue;
     border-color: #681a0c;
 }
-#botao_config{
-    font-size: 20px;
-    width: 28px;
-    cursor: pointer;
-    user-select: none;
-}
+
 
 /* 1. Estilo do Botão de Engrenagem */
 #botao_config {
     font-size: 1.5rem; 
     cursor: pointer;       /* Mãozinha ao passar o mouse */
-    text-align: right;
+    text-align: right;     
     margin-bottom: 10px; 
-    transition: transform 0.4s ease; /* Animação suave */
+    transition: transform 0.3s; /* Animação suave */
 }
 
-/* Efeito: Gira a engrenagem quando passa o mouse */
 #botao_config:hover {
-    transform: scale(1.2);
+    transform: scale(1.02);
 }
 
 /* 2. Estilo do Painel de Configurações */
@@ -111,7 +105,7 @@ div#relogio{
 #btn_salvar {
     margin-top: 15px;
     padding: 8px 20px;
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
