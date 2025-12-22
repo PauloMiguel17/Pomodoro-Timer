@@ -46,7 +46,13 @@ function comecar() {
         if (minutos === 0 && segundos === 0) {
             clearInterval(intervalo);
             intervalo = null;
-            alert("Acabou o tempo!");
+
+            const audio = document.getElementById('alarme');
+            audio.play();
+
+            setTimeout(function() {
+                alert("Acabou o tempo!");
+            }, 100);
             return;
         }
 
